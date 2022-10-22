@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.EntityFrameworkCore;
 using BankingRabbitMQ.Infrastructure.IoC;
 using BankingRabbitMQ.Service.Banking.Data.Context;
 using BankingRabbitMQ.Service.Banking.Api.Extensions;
 using MediatR;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace BankingRabbitMQ.Service.Banking.Api
 {

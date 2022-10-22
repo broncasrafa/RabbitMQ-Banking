@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankingRabbitMQ.Service.Banking.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BankingRabbitMQ.Service.Banking.Api.Controllers.BankingController.Get">
+            <summary>
+            Gets a list of accounts
+            </summary>
+            <returns>The collection of accounts registered</returns>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Banking.Api.Controllers.BankingController.Post(BankingRabbitMQ.Service.Banking.Application.DTOs.AccountTransferDTO)">
+            <summary>
+            Realize a transfer between accounts
+            </summary>
+            <param name="accountTransfer">object that represents an account transfer</param>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Banking.Api.Extensions.ApplicationBuildersRegistration.UseSwaggerConfigure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adiciona as configurações do swagger ao pipeline da aplicação.
+            </summary>
+            <param name="app">application builder app original do pipeline da aplicação</param>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Banking.Api.Extensions.ServicesRegistration.AddSwaggerOpenAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adiciona o serviço para swagger OpenAPI no container de serviços
+            </summary>
+            <param name="services">container services</param>
+            <returns>container services com o swagger OpenAPI no container</returns>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Banking.Api.Extensions.ServicesRegistration.AddControllerAndJsonConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adiciona as configurações de controller e JSON no container de serviços
+            </summary>
+            <param name="services">container services</param>
+            <returns>container services com as configurações de controller e JSON no container</returns>
+        </member>
+    </members>
+</doc>

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BankingRabbitMQ.Service.Banking.Application.DTOs;
 using BankingRabbitMQ.Service.Banking.Application.Interfaces;
 
@@ -35,7 +33,7 @@ namespace BankingRabbitMQ.Service.Banking.Api.Controllers
 
 
         /// <summary>
-        /// Realize a transfer between accounts
+        /// Makes a transfer between accounts
         /// </summary>
         /// <param name="accountTransfer">object that represents an account transfer</param>
         [HttpPost]

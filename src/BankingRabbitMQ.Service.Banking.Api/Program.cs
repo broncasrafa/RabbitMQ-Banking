@@ -1,5 +1,8 @@
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using BankingRabbitMQ.Infrastructure.IoC;
+using BankingRabbitMQ.Service.Banking.Api.Extensions;
+using BankingRabbitMQ.Service.Banking.Data.Context;
+using MediatR;
 
 namespace BankingRabbitMQ.Service.Banking.Api
 {
@@ -7,41 +10,65 @@ namespace BankingRabbitMQ.Service.Banking.Api
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var builder = WebApplication.CreateBuilder(args);
+
+            IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{Environments.Development}.json", optional: true, reloadOnChange: true)
+                .AddEnvironmentVariables()
+                .Build();
+
+            #region [ Services: Add services to the container ]
+            // Add services to the container.
+            builder.Services.AddDbContext<BankingDbContext>(options =>
+            {
+                options.UseSqlServer(configuration.GetConnectionString("BankingDbConnection"));
+            });
+
+            builder.Services.AddSwaggerOpenAPI();
+            builder.Services.AddControllerAndJsonConfigurations();
+            builder.Services.AddMediatR(typeof(Startup));
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddHealthChecks();
+            builder.Services.AddEndpointsApiExplorer();
+
+            RegisterServices(builder.Services);
+            #endregion
+
+            #region [ Configuration app: Configure the HTTP request pipeline ]
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseSwaggerConfigure();
+            app.UseHttpsRedirection();
+            app.UseAuthorization();
+            app.UseHealthChecks("/health");
+            app.UseStaticFiles();
+            app.MapControllers();
+
+            app.Run();
+            #endregion
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
 
-        //public static void Main(string[] args)
-        //{
-        //    var builder = WebApplication.CreateBuilder(args);
-
-        //    // Add services to the container.
-
-        //    builder.Services.AddControllers();
-        //    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-        //    builder.Services.AddEndpointsApiExplorer();
-        //    builder.Services.AddSwaggerGen();
-
-        //    var app = builder.Build();
-
-        //    // Configure the HTTP request pipeline.
-        //    if (app.Environment.IsDevelopment())
-        //    {
-        //        app.UseSwagger();
-        //        app.UseSwaggerUI();
-        //    }
-
-        //    app.UseHttpsRedirection();
-
-        //    app.UseAuthorization();
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
+        }
 
 
-        //    app.MapControllers();
-
-        //    app.Run();
-        //}
     }
 }

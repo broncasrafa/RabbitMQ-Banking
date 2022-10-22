@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -18,6 +19,7 @@ namespace BankingRabbitMQ.Service.Banking.Api.Extensions
         /// <returns>container services com o swagger OpenAPI no container</returns>
         public static void AddSwaggerOpenAPI(this IServiceCollection services)
         {
+            var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -32,6 +34,7 @@ namespace BankingRabbitMQ.Service.Banking.Api.Extensions
                         Url = new Uri("https://github.com/broncasrafa")
                     }
                 });
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",

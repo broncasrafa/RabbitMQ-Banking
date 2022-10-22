@@ -1,13 +1,13 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.Text;
+using Microsoft.Extensions.DependencyInjection;
 using BankingRabbitMQ.Core.Domain.Bus;
 using BankingRabbitMQ.Core.Domain.Commands;
 using BankingRabbitMQ.Core.Domain.Events;
-using MediatR;
 using RabbitMQ.Client;
-using System.Text.Json;
-using System.Text;
 using RabbitMQ.Client.Events;
+using MediatR;
 using Newtonsoft.Json;
+
 
 namespace BankingRabbitMQ.Infrastructure.Bus
 {

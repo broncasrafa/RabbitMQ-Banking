@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{0ED2EB1D-4346-4063-9173-CB58EF046520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Core.Domain", "src\BankingRabbitMQ.Core.Domain\BankingRabbitMQ.Core.Domain.csproj", "{7E028740-D29B-4546-A1A6-9AA36AE67027}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Core.Domain", "src\BankingRabbitMQ.Core.Domain\BankingRabbitMQ.Core.Domain.csproj", "{7E028740-D29B-4546-A1A6-9AA36AE67027}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Infrastructure.Bus", "src\BankingRabbitMQ.Infrastructure.Bus\BankingRabbitMQ.Infrastructure.Bus.csproj", "{BD1D0F3F-99CB-4688-9553-2E222262ACA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Infrastructure.Bus", "src\BankingRabbitMQ.Infrastructure.Bus\BankingRabbitMQ.Infrastructure.Bus.csproj", "{BD1D0F3F-99CB-4688-9553-2E222262ACA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Infrastructure.IoC", "src\BankingRabbitMQ.Infrastructure.IoC\BankingRabbitMQ.Infrastructure.IoC.csproj", "{47CC27FC-81EA-4FB2-A966-42526DE98F87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Infrastructure.IoC", "src\BankingRabbitMQ.Infrastructure.IoC\BankingRabbitMQ.Infrastructure.IoC.csproj", "{47CC27FC-81EA-4FB2-A966-42526DE98F87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banking", "Banking", "{B9A647A7-11BF-446F-8098-A999AF3D8233}"
 EndProject
@@ -31,13 +31,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{160929EA-1A6F-4607-B3AD-5A84931DD0A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Banking.Api", "src\BankingRabbitMQ.Service.Banking.Api\BankingRabbitMQ.Service.Banking.Api.csproj", "{32260B6E-1086-41EA-8FBB-AEC9A4B83DDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Service.Banking.Api", "src\BankingRabbitMQ.Service.Banking.Api\BankingRabbitMQ.Service.Banking.Api.csproj", "{32260B6E-1086-41EA-8FBB-AEC9A4B83DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Banking.Application", "src\BankingRabbitMQ.Service.Banking.Application\BankingRabbitMQ.Service.Banking.Application.csproj", "{DF14DB04-8D3C-4570-AF6F-A6DFF51AF5A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Service.Banking.Application", "src\BankingRabbitMQ.Service.Banking.Application\BankingRabbitMQ.Service.Banking.Application.csproj", "{DF14DB04-8D3C-4570-AF6F-A6DFF51AF5A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Banking.Domain", "src\BankingRabbitMQ.Service.Banking.Domain\BankingRabbitMQ.Service.Banking.Domain.csproj", "{18355387-2C47-4E45-9B12-F41CE5551704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Service.Banking.Domain", "src\BankingRabbitMQ.Service.Banking.Domain\BankingRabbitMQ.Service.Banking.Domain.csproj", "{18355387-2C47-4E45-9B12-F41CE5551704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Banking.Data", "src\BankingRabbitMQ.Service.Banking.Data\BankingRabbitMQ.Service.Banking.Data.csproj", "{A42C7827-E71D-4B25-B60A-A6F21ACCC89C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Service.Banking.Data", "src\BankingRabbitMQ.Service.Banking.Data\BankingRabbitMQ.Service.Banking.Data.csproj", "{A42C7827-E71D-4B25-B60A-A6F21ACCC89C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6EA1FDD9-12F7-4A6C-B7EA-D4DCE54EADE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{EB950027-756A-474F-9E94-AB00DB973784}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{97120F28-F367-4D0E-9CAB-F09299201344}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{D1B4F484-842C-4028-8CC0-3AF200E56F03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingRabbitMQ.Service.Transfer.Domain", "src\BankingRabbitMQ.Service.Transfer.Domain\BankingRabbitMQ.Service.Transfer.Domain.csproj", "{54ACAD8B-D2A9-4D74-8C37-07FDC7E3CAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Transfer.Application", "src\BankingRabbitMQ.Service.Transfer.Application\BankingRabbitMQ.Service.Transfer.Application.csproj", "{DA9B3168-1E26-4B09-BE77-99221633B97C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Transfer.Data", "src\BankingRabbitMQ.Service.Transfer.Data\BankingRabbitMQ.Service.Transfer.Data.csproj", "{4C992F43-04A3-44F3-8401-19DFAAFF14CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingRabbitMQ.Service.Transfer.Api", "src\BankingRabbitMQ.Service.Transfer.Api\BankingRabbitMQ.Service.Transfer.Api.csproj", "{D6D728D3-0F12-4D76-92E8-EA6354F01F71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +89,22 @@ Global
 		{A42C7827-E71D-4B25-B60A-A6F21ACCC89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42C7827-E71D-4B25-B60A-A6F21ACCC89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42C7827-E71D-4B25-B60A-A6F21ACCC89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54ACAD8B-D2A9-4D74-8C37-07FDC7E3CAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54ACAD8B-D2A9-4D74-8C37-07FDC7E3CAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54ACAD8B-D2A9-4D74-8C37-07FDC7E3CAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54ACAD8B-D2A9-4D74-8C37-07FDC7E3CAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9B3168-1E26-4B09-BE77-99221633B97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9B3168-1E26-4B09-BE77-99221633B97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9B3168-1E26-4B09-BE77-99221633B97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9B3168-1E26-4B09-BE77-99221633B97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C992F43-04A3-44F3-8401-19DFAAFF14CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C992F43-04A3-44F3-8401-19DFAAFF14CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C992F43-04A3-44F3-8401-19DFAAFF14CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C992F43-04A3-44F3-8401-19DFAAFF14CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D728D3-0F12-4D76-92E8-EA6354F01F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D728D3-0F12-4D76-92E8-EA6354F01F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D728D3-0F12-4D76-92E8-EA6354F01F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D728D3-0F12-4D76-92E8-EA6354F01F71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +124,14 @@ Global
 		{DF14DB04-8D3C-4570-AF6F-A6DFF51AF5A0} = {B7E05F7D-A47A-4057-A659-E19929DDE1F4}
 		{18355387-2C47-4E45-9B12-F41CE5551704} = {D42EA5CC-B8CA-4428-A979-5838E3A1235A}
 		{A42C7827-E71D-4B25-B60A-A6F21ACCC89C} = {160929EA-1A6F-4607-B3AD-5A84931DD0A6}
+		{6EA1FDD9-12F7-4A6C-B7EA-D4DCE54EADE8} = {10576DCD-B9E1-4FF1-9D1E-C47E1BA50D5F}
+		{EB950027-756A-474F-9E94-AB00DB973784} = {10576DCD-B9E1-4FF1-9D1E-C47E1BA50D5F}
+		{97120F28-F367-4D0E-9CAB-F09299201344} = {10576DCD-B9E1-4FF1-9D1E-C47E1BA50D5F}
+		{D1B4F484-842C-4028-8CC0-3AF200E56F03} = {10576DCD-B9E1-4FF1-9D1E-C47E1BA50D5F}
+		{54ACAD8B-D2A9-4D74-8C37-07FDC7E3CAF3} = {97120F28-F367-4D0E-9CAB-F09299201344}
+		{DA9B3168-1E26-4B09-BE77-99221633B97C} = {EB950027-756A-474F-9E94-AB00DB973784}
+		{4C992F43-04A3-44F3-8401-19DFAAFF14CA} = {D1B4F484-842C-4028-8CC0-3AF200E56F03}
+		{D6D728D3-0F12-4D76-92E8-EA6354F01F71} = {6EA1FDD9-12F7-4A6C-B7EA-D4DCE54EADE8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C43A39F-D9F4-4F75-AAE2-86A3422E3097}

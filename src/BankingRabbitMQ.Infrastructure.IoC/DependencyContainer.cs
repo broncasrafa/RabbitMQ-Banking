@@ -9,7 +9,7 @@ using BankingRabbitMQ.Service.Banking.Data.Context;
 using MediatR;
 using BankingRabbitMQ.Service.Banking.Domain.CommandHandlers;
 using BankingRabbitMQ.Service.Banking.Domain.Commands;
-using BankingRabbitMQ.Service.Banking.Domain.Events;
+using BankingRabbitMQ.Service.Transfer.Data.Context;
 
 namespace BankingRabbitMQ.Infrastructure.IoC
 {
@@ -41,7 +41,7 @@ namespace BankingRabbitMQ.Infrastructure.IoC
             services.AddTransient<IAccountRepository, AccountRepository>();
             //services.AddTransient<ITransferRepository, TransferRepository>();
             services.AddTransient<BankingDbContext>();
-            //services.AddTransient<TransferDbContext>();
+            services.AddTransient<TransferDbContext>();
         }
     }
 }

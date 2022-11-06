@@ -6,7 +6,7 @@ namespace BankingRabbitMQ.Service.Banking.Data.Context
 {
     public class BankingDbContext : DbContext
     {
-        public BankingDbContext(DbContextOptions<BankingDbContext> options) 
+        public BankingDbContext(DbContextOptions options) 
             : base(options)
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;

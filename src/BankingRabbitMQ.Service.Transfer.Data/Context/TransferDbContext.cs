@@ -6,7 +6,7 @@ namespace BankingRabbitMQ.Service.Transfer.Data.Context
 {
     public class TransferDbContext : DbContext
     {
-        public TransferDbContext(DbContextOptions<TransferDbContext> options)
+        public TransferDbContext(DbContextOptions options)
             : base(options)
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;

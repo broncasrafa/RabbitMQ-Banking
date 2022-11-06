@@ -1,1 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankingRabbitMQ.Service.Transfer.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BankingRabbitMQ.Service.Transfer.Api.Extensions.ApplicationBuildersRegistration.UseSwaggerConfigure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adiciona as configurações do swagger ao pipeline da aplicação.
+            </summary>
+            <param name="app">application builder app original do pipeline da aplicação</param>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Transfer.Api.Extensions.ServicesRegistration.AddSwaggerOpenAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adiciona o serviço para swagger OpenAPI no container de serviços
+            </summary>
+            <param name="services">container services</param>
+            <returns>container services com o swagger OpenAPI no container</returns>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Transfer.Api.Extensions.ServicesRegistration.AddControllerAndJsonConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adiciona as configurações de controller e JSON no container de serviços
+            </summary>
+            <param name="services">container services</param>
+            <returns>container services com as configurações de controller e JSON no container</returns>
+        </member>
+    </members>
+</doc>

@@ -7,6 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Folder Include="DTOs\" />
+		<Folder Include="Interfaces\" />
+		<Folder Include="Services\" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\BankingRabbitMQ.Service.Banking.Domain\BankingRabbitMQ.Service.Banking.Domain.csproj" />
 	</ItemGroup>
 

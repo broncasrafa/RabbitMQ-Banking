@@ -18,7 +18,6 @@
 	  <ProjectReference Include="..\BankingRabbitMQ.Service.Banking.Domain\BankingRabbitMQ.Service.Banking.Domain.csproj" />
 	  <ProjectReference Include="..\BankingRabbitMQ.Service.Transfer.Application\BankingRabbitMQ.Service.Transfer.Application.csproj" />
 	  <ProjectReference Include="..\BankingRabbitMQ.Service.Transfer.Data\BankingRabbitMQ.Service.Transfer.Data.csproj" />
-	  <ProjectReference Include="..\BankingRabbitMQ.Service.Transfer.Domain\BankingRabbitMQ.Service.Transfer.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

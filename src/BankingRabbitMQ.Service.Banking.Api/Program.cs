@@ -28,7 +28,7 @@ namespace BankingRabbitMQ.Service.Banking.Api
 
             builder.Services.AddSwaggerOpenAPI();
             builder.Services.AddControllerAndJsonConfigurations();
-            builder.Services.AddMediatR(typeof(Startup));
+            builder.Services.AddMediatR(typeof(Program));
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddHealthChecks();
             builder.Services.AddEndpointsApiExplorer();

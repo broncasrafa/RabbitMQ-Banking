@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using BankingRabbitMQ.Service.Transfer.Domain.Models;
 
 namespace BankingRabbitMQ.Service.Transfer.Data.Context
 {
@@ -11,7 +12,7 @@ namespace BankingRabbitMQ.Service.Transfer.Data.Context
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
-
+        public DbSet<TransferLog> TransferLogs { get; set; }
 
 
 

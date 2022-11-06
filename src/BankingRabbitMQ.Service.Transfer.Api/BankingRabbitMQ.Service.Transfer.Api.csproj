@@ -39,8 +39,4 @@
 	  <ProjectReference Include="..\BankingRabbitMQ.Infrastructure.IoC\BankingRabbitMQ.Infrastructure.IoC.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Controllers\" />
-	</ItemGroup>
-
 </Project>

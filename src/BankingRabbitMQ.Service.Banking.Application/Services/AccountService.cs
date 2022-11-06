@@ -1,5 +1,7 @@
-﻿using BankingRabbitMQ.Service.Banking.Application.DTOs;
+﻿using BankingRabbitMQ.Core.Domain.Bus;
+using BankingRabbitMQ.Service.Banking.Application.DTOs;
 using BankingRabbitMQ.Service.Banking.Application.Interfaces;
+using BankingRabbitMQ.Service.Banking.Domain.Commands;
 using BankingRabbitMQ.Service.Banking.Domain.Interfaces;
 
 namespace BankingRabbitMQ.Service.Banking.Application.Services
@@ -7,10 +9,12 @@ namespace BankingRabbitMQ.Service.Banking.Application.Services
     public class AccountService : IAccountService
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly IEventBus _eventBus;
 
-        public AccountService(IAccountRepository accountRepository)
+        public AccountService(IAccountRepository accountRepository, IEventBus eventBus)
         {
             _accountRepository = accountRepository;
+            _eventBus = eventBus;
         }
 
 
@@ -24,7 +28,12 @@ namespace BankingRabbitMQ.Service.Banking.Application.Services
 
         public void Transfer(AccountTransferDTO accountTransfer)
         {
-            throw new NotImplementedException();
+            var createTransferCommand = new CreateTransferCommand(
+                from: accountTransfer.FromAccount,
+                to: accountTransfer.ToAccount,
+                amount: accountTransfer.TransferAmount);
+
+            _eventBus.SendCommand(createTransferCommand);           
         }
     }
 }

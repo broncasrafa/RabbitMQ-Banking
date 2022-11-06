@@ -12,7 +12,7 @@
         </member>
         <member name="M:BankingRabbitMQ.Service.Banking.Api.Controllers.BankingController.Post(BankingRabbitMQ.Service.Banking.Application.DTOs.AccountTransferDTO)">
             <summary>
-            Realize a transfer between accounts
+            Makes a transfer between accounts
             </summary>
             <param name="accountTransfer">object that represents an account transfer</param>
         </member>

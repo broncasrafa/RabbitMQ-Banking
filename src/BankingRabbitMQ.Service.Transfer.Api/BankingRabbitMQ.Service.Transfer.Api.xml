@@ -4,9 +4,21 @@
         <name>BankingRabbitMQ.Service.Transfer.Api</name>
     </assembly>
     <members>
+        <member name="M:BankingRabbitMQ.Service.Transfer.Api.Controllers.TransferController.Get">
+            <summary>
+            Gets a list of registered tranfers
+            </summary>
+            <returns>The collection of tranfers registered</returns>
+        </member>
         <member name="M:BankingRabbitMQ.Service.Transfer.Api.Extensions.ApplicationBuildersRegistration.UseSwaggerConfigure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
             Adiciona as configurações do swagger ao pipeline da aplicação.
+            </summary>
+            <param name="app">application builder app original do pipeline da aplicação</param>
+        </member>
+        <member name="M:BankingRabbitMQ.Service.Transfer.Api.Extensions.ApplicationBuildersRegistration.ConfigureEventBus(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adiciona as configurações para que todos os microserviços se inscrevam (subscribe) para qualquer evento que eles precisam
             </summary>
             <param name="app">application builder app original do pipeline da aplicação</param>
         </member>

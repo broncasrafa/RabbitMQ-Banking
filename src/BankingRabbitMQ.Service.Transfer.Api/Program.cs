@@ -59,6 +59,7 @@ namespace BankingRabbitMQ.Service.Transfer.Api
             app.UseHealthChecks("/health");
             app.UseStaticFiles();
             app.MapControllers();
+            app.ConfigureEventBus();
 
             app.Run();
             #endregion

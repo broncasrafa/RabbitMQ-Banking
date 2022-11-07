@@ -13,8 +13,9 @@ using BankingRabbitMQ.Service.Transfer.Data.Repository;
 using BankingRabbitMQ.Service.Transfer.Application.Interfaces;
 using BankingRabbitMQ.Service.Transfer.Application.Services;
 using BankingRabbitMQ.Service.Transfer.Domain.Interfaces;
+using BankingRabbitMQ.Service.Transfer.Domain.EventsHandlers;
+using BankingRabbitMQ.Service.Transfer.Domain.Events;
 using MediatR;
-
 
 
 namespace BankingRabbitMQ.Infrastructure.IoC
@@ -31,10 +32,10 @@ namespace BankingRabbitMQ.Infrastructure.IoC
             });
 
             // Subscriptions
-            //services.AddTransient<TransferEventHandler>();
+            services.AddTransient<TransferEventHandler>();
 
             // Domain Events
-            //services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
+            services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
 
             // Domain Banking Commands
             services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();

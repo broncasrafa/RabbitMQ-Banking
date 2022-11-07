@@ -1,7 +1,8 @@
 ﻿using BankingRabbitMQ.Core.Domain.Bus;
+using BankingRabbitMQ.Service.Transfer.Application.DTOs;
 using BankingRabbitMQ.Service.Transfer.Application.Interfaces;
 using BankingRabbitMQ.Service.Transfer.Domain.Interfaces;
-using BankingRabbitMQ.Service.Transfer.Domain.Models;
+
 
 namespace BankingRabbitMQ.Service.Transfer.Application.Services
 {
@@ -18,9 +19,10 @@ namespace BankingRabbitMQ.Service.Transfer.Application.Services
 
 
 
-        public IEnumerable<TransferLog> GetTransferLogs()
+        public IEnumerable<TransferLogDTO> GetTransferLogs()
         {
-            return _transferRepository.GetTransferLogs();
+            return _transferRepository.GetTransferLogs()
+                                        .Select(c => new TransferLogDTO(c.Id, c.FromAccount, c.ToAccount, c.TransferAmount));
         }
     }
 }
